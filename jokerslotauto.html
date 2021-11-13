@@ -1,0 +1,55 @@
+const LIFF_ID = "1656628995-LYlOBmzB";
+
+(async () => {
+  await liff.init({ liffId: LIFF_ID }).catch((err) => {
+    throw err;
+  });
+  if (!liff.isLoggedIn()) {
+    liff.login();
+  }
+})();
+
+// share to friends
+
+// 
+
+const data = {
+  text: "ทำไรอยู่", //ข้อความตอนแชร์
+  content: [
+    // Card 1
+    {
+      image:
+        "https://www.img.in.th/image/WyuwCu", //ลิงก์รูปปก
+      title: "อย่ารอช้า ลุ้นรับทอง มูลค่า1บาท", //หัวข้อใหญ่
+      message: "สล็อตทุกค่าย & คาสิโน ไม่ต้องฝากก่อน", //ข้อความ
+    },
+    // Card 2
+    {
+      image:
+        "https://www.img.in.th/image/Wyuq1k", //ลิงก์รูปปก
+      title: "ประกาศ!! รายชื่อรางวัลผู้โชคดี", //หัวข้อใหญ่
+      message: "สล็อตทุกค่าย & คาสิโน การเงินมั่นคง", //ข้อความ
+    },
+    // Card 3
+    {
+      image:
+        "https://www.img.in.th/image/WyVfxu", //ลิงก์รูปปก
+      title: "แจ๊คพ็อตแตกหนัก แจกบ่อย!!", //หัวข้อใหญ่
+      message: "สล็อตทุกค่าย & คาสิโน ระบบคุณภาพ", //ข้อความ
+    },
+  ],
+  link: {
+    register: "https://betflix99th.mewallet.cc/register", //ลิงก์ปุ่มสมัคร
+    shared: `https://liff.line.me/${LIFF_ID}?LINE=true`, //ลิงก์ปุ่มแชร์
+    image: "https://lin.ee/Y1hB1cc", //ลิงก์รูปภาพ
+  },
+  settings: {
+    color: {
+      title: "#FDF9F8", //สีหัวข้อ
+      message: "#ffb70a", //สีข้อความ
+      background: "#a12fce", //พื้นหลัง
+      button: "#ed9f09", //สีปุ่ม
+    },
+    size: 'giga' //มีขนาด giga, mega, kilo, micro, nano
+  },
+};
